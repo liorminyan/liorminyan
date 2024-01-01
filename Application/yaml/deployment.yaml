@@ -1,18 +1,18 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-# set your lab user15
+# set your lab user name
   name: user15-hello-world
 spec:
   replicas: 3
   selector:
     matchLabels:
-# set your lab user15
+# set your lab user name
       app: user15-hello-world
   template:
     metadata:
       labels:
-# set your lab user15
+# set your lab user name
         app: user15-hello-world
     spec:
       containers:
@@ -24,7 +24,7 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent
 # Update with the image you build in part 1
-          image: quay.io/quay-liorminyan/labuser:v1
+          image: 'quay.io/quay-user15/labusere:v1'
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
